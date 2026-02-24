@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Disponibilidade | Chalé Toca do Esquilo</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#e8f3e8', 
+                            DEFAULT: '#4a7c59', 
+                            dark: '#2d4a36',
+                            accent: '#d4a373' 
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Centraliza o calendário */
+        .flatpickr-calendar.inline {
+            margin: 0 auto !important; /* Força o alinhamento no meio */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+            border: 1px solid #e5e7eb !important;
+            border-radius: 12px;
+        }
+        /* Estiliza as datas desabilitadas/bloqueadas (cinza + riscado) */
+        .flatpickr-day.disabled, .flatpickr-day.disabled:hover {
+            color: #9ca3af !important; /* Letra cinza */
+            background-color: #f3f4f6 !important; /* Fundo cinza clarinho */
+            text-decoration: line-through; /* Risco cortando a data */
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-brand-light/30 antialiased min-h-screen flex flex-col">
+
+    <header class="w-full bg-white shadow-sm z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex-shrink-0 flex items-center gap-2">
+                <i class="fa-solid fa-tree text-brand text-xl"></i>
+                <span class="font-serif font-bold text-lg text-brand-dark">Toca do Esquilo</span>
+            </div>
+            <a href="index.html" class="text-gray-500 hover:text-brand font-semibold flex items-center gap-2 transition">
+                <i class="fa-solid fa-arrow-left"></i> Voltar ao site
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="bg-white p-8 rounded-3xl shadow-xl max-w-lg w-full">
+            
+            <div class="text-center mb-8">
+                <div class="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-regular fa-calendar-check text-2xl text-brand"></i>
+                </div>
+                <h1 class="text-2xl font-serif font-bold text-brand-dark mb-2">Selecione suas datas</h1>
+                <p class="text-gray-500 text-sm">Verifique a disponibilidade do chalé e faça sua pré-reserva direto pelo WhatsApp.</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="w-full flex flex-col items-center">
+                    <label class="block text-sm font-bold text-gray-700 mb-4 text-center">Check-in e Check-out:</label>
+                    <input type="text" id="calendario-reserva" class="hidden">
+                </div>
+
+                <button onclick="enviarParaWhatsApp()" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-4 px-8 rounded-xl transition shadow-lg flex items-center justify-center gap-2 text-lg mt-4">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar Reserva
+                </button>
+            </div>
+
+            <p class="text-center text-xs text-gray-400 mt-6">
+                Ao clicar, você será redirecionado para o nosso WhatsApp com as datas preenchidas.
+            </p>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script> 
+    <script>
+        const calendario = flatpickr("#calendario-reserva", {
+            mode: "range", 
+            minDate: "today", 
+            locale: "pt", 
+            dateFormat: "d/m/Y", 
+            inline: true
+        });
+
+        function enviarParaWhatsApp() {
+            const datas = document.getElementById("calendario-reserva").value;
+            if(!datas) {
+                alert("Por favor, selecione as datas da sua viagem no calendário!");
+                return;
+            }
+            
+            const mensagem = `Olá! Gostaria de reservar o chalé para as datas: *${datas}*. Ainda tem disponibilidade?`;
+            const numeroWhatsApp = "5514998947316"; 
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+            
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>

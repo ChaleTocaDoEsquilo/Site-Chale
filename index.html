@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalé Toca do Esquilo | Seu Refúgio na Natureza em Arandu/SP</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#e8f3e8', 
+                            DEFAULT: '#4a7c59', 
+                            dark: '#2d4a36',
+                            accent: '#d4a373' 
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-bg {
+            background-image: url('arandu 012.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased">
+
+   <header class="absolute w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="fbd0738c-e5f3-4cd4-aae7-f7412f957b98-removebg-preview.png" alt="Logo Toca do Esquilo" class="h-24 w-auto">
+    
+                        <span class="font-serif font-bold text-lg md:text-xl text-brand-dark">Toca do Esquilo</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#sobre" class="text-gray-600 hover:text-brand transition font-medium">Sobre</a>
+                    <a href="acomodacoes.html" class="text-gray-600 hover:text-brand transition font-medium">Os Chalés</a>
+                    <a href="lazer.html" class="text-gray-600 hover:text-brand transition font-medium">Lazer</a>
+                    <a href="#localizacao" class="text-gray-600 hover:text-brand transition font-medium">Localização</a>
+                </nav>
+                <div class="hidden md:flex">
+                    <a href="reservas.html" class="bg-brand hover:bg-brand-dark text-white px-6 py-2 rounded-full font-semibold transition shadow-lg hover:shadow-xl flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check"></i> Reservar Agora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center px-4 relative pt-20">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="max-w-3xl relative z-10">
+            <span class="text-brand-accent font-semibold tracking-widest uppercase text-sm mb-4 block drop-shadow-md">Arandu, São Paulo</span>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-lg">Seu refúgio rústico à beira da represa Jurumirim</h1>
+            <p class="text-lg md:text-xl text-gray-100 mb-10 font-light drop-shadow-md">Desconecte-se da rotina. Natureza, tranquilidade e lazer completo para toda a família em nossos chalés independentes.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center"> 
+                <a href="reservas.html" class="inline-block bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-full font-semibold text-lg transition shadow-2xl">
+                    Veja Disponibilidade
+                </a>
+                <a href="acomodacoes.html" class="inline-block bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg transition shadow-2xl border border-white/50">
+                    Conheça nossos chalés
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white relative -mt-6 rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.05)] mx-4 md:mx-auto max-w-6xl z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-6 text-center">
+            <div>
+                <i class="fa-solid fa-water text-3xl text-brand mb-3"></i>
+                <h3 class="font-bold text-brand-dark mt-2">Beira da Represa</h3>
+                <p class="text-sm text-gray-500 mt-1">Acesso direto à água</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-house-chimney text-3xl text-brand mb-3"></i>
+                <h3 class="font-bold text-brand-dark mt-2">5 Chalés</h3>
+                <p class="text-sm text-gray-500 mt-1">Exclusivos e independentes</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-wifi text-3xl text-brand mb-3"></i>
+                <h3 class="font-bold text-brand-dark mt-2">Wi-Fi Grátis</h3>
+                <p class="text-sm text-gray-500 mt-1">Conexão em todo o espaço</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-ship text-3xl text-brand mb-3"></i>
+                <h3 class="font-bold text-brand-dark mt-2">Lazer Completo</h3>
+                <p class="text-sm text-gray-500 mt-1">Caiaque, pedalinho e piscina</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-6">Uma experiência única em 3000m² de natureza preservada</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Localizado em Arandu/SP, o Chalé Toca do Esquilo foi projetado para proporcionar momentos inesquecíveis com família e amigos. 
+                    Acorde com o canto dos pássaros, tome um café na varanda sentindo a brisa da represa e termine o dia contemplando as estrelas.
+                </p>
+                <ul class="space-y-3 text-gray-600 mb-8">
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Perfeito para famílias e casais</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Área verde extensa e segura</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Estrutura completa para descanso e diversão</li>
+                </ul>
+                <a href="lazer.html" class="text-brand font-bold hover:text-brand-dark transition underline underline-offset-4">
+                    Ver todas as opções de lazer →
+                </a>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="gallery-1-DQA7dniU.jpeg" alt="Vista da Represa" class="rounded-2xl shadow-lg h-64 object-cover w-full">
+                <img src="gallery-2-Bx0YLxOd.jpeg" alt="Natureza" class="rounded-2xl shadow-lg h-64 object-cover w-full mt-8">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-light/40">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 h-80 md:h-96 rounded-3xl overflow-hidden shadow-xl relative">
+                <img src="Represa_jurumirim_de_avare-arquitetura_ek.jpg" alt="Represa de Jurumirim" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                    <span class="text-white font-bold text-xl"><i class="fa-solid fa-location-arrow text-brand-accent mr-2"></i> Represa de Jurumirim</span>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <span class="text-brand-accent font-bold uppercase tracking-wider text-sm mb-2 block">O Seu Quintal</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-6">Mergulhe na maior represa do estado</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    A Represa de Jurumirim é famosa por suas águas limpas e cristalinas. Estar hospedado às margens dela significa ter acesso privilegiado a esportes náuticos ou simplesmente contemplar o pôr do sol mais bonito da região de Avaré e Arandu.
+                </p>
+                <a href="acomodacoes.html" class="inline-block border-2 border-brand text-brand hover:bg-brand hover:text-white px-6 py-3 rounded-full font-bold transition">
+                    Ver Nossos Chalés
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-4">O que dizem nossos hóspedes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A maior recompensa do nosso trabalho é a satisfação de quem escolhe a Toca do Esquilo.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100 relative mt-6">
+                    <div class="absolute -top-6 left-8 w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl shadow-lg">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4 mt-2 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic leading-relaxed">"Lugar impecável fui na minha lua de mel cheio de energias boas,uma vista surreal muito aconchegante,e o atendimento mais perfeito ainda uma atenção.é de se admirar não vejo a hora de volta que deus abençoe 💕🥂"</p>
+                    <div class="font-bold text-brand-dark">Thaynna Correa</div>
+                    <div class="text-sm text-gray-400">Viajou em casal</div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100 relative mt-6">
+                    <div class="absolute -top-6 left-8 w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl shadow-lg">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4 mt-2 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic leading-relaxed">"Minha experiência no local foi incrível desde a recepção até a saída, lugar perfeito para quem quer sair da bagunça da cidade grande"</p>
+                    <div class="font-bold text-brand-dark">Marco Lopes</div>
+                    <div class="text-sm text-gray-400">Viagem em família</div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100 relative mt-6">
+                    <div class="absolute -top-6 left-8 w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl shadow-lg">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4 mt-2 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic leading-relaxed">"Lugar maravilhoso, tranquilo, no meio da natureza, com vários opções de lazer, ótima estadia, atendimento perfeito desde a reserva! Para quem procura um lugar para descansar e curtir a família, esse é o melhor!!!
+                    Com toda certeza irei voltar!"</p>
+                    <div class="font-bold text-brand-dark">Denise Queiroz</div>
+                    <div class="text-sm text-gray-400">Viajou em casal</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-dark text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <i class="fa-regular fa-circle-question text-4xl text-brand-accent mb-4"></i>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Dúvidas Frequentes</h2>
+                <p class="text-brand-light">Tudo o que você precisa saber antes de arrumar as malas.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white/10 hover:bg-white/20 transition rounded-2xl p-6 cursor-pointer border border-white/10">
+                    <summary class="font-bold flex justify-between items-center text-lg outline-none">
+                        Vocês aceitam animais de estimação (Pet Friendly)?
+                        <span class="transition duration-300 group-open:-rotate-180 text-brand-accent">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="text-gray-300 mt-4 leading-relaxed border-t border-white/10 pt-4">
+                        Sim! Amamos animais e somos um espaço Pet Friendly. Seu amiguinho de quatro patas é muito bem-vindo para curtir a natureza com você.
+                    </p>
+                </details>
+
+                <details class="group bg-white/10 hover:bg-white/20 transition rounded-2xl p-6 cursor-pointer border border-white/10">
+                    <summary class="font-bold flex justify-between items-center text-lg outline-none">
+                        Qual é o horário de Check-in e Check-out?
+                        <span class="transition duration-300 group-open:-rotate-180 text-brand-accent">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="text-gray-300 mt-4 leading-relaxed border-t border-white/10 pt-4">
+                        Nosso check-in padrão se inicia a partir das 10h00 e o check-out deve ser realizado até as 16h00 do dia.
+                    </p>
+                </details>
+
+                <details class="group bg-white/10 hover:bg-white/20 transition rounded-2xl p-6 cursor-pointer border border-white/10">
+                    <summary class="font-bold flex justify-between items-center text-lg outline-none">
+                        É permitido som alto na área da piscina e churrasqueira?
+                        <span class="transition duration-300 group-open:-rotate-180 text-brand-accent">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="text-gray-300 mt-4 leading-relaxed border-t border-white/10 pt-4">
+                        Nosso maior atrativo é o contato com a natureza e a tranquilidade. Por isso, não permitimos som automotivo ou caixas de som potentes. O uso de som ambiente em volume baixo é bem-vindo durante o dia, respeitando sempre o espaço dos outros hóspedes.
+                    </p>
+                </details>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="https://wa.me/5514998947316" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-bold transition shadow-lg flex items-center justify-center gap-2 max-w-xs mx-auto">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Chamar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="localizacao" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-4">Como Chegar</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos localizados às margens da Represa de Jurumirim, no Portal do Catavento em Arandu/SP.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row border border-gray-100 max-w-5xl mx-auto">
+                <div class="md:w-1/3 p-8 flex flex-col justify-center bg-brand-light/20">
+                    <div class="mb-8">
+                        <h3 class="font-bold text-xl text-brand-dark mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-brand"></i> Endereço
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Rua Joaquim Lopes da Fonseca, 16<br>
+                            Portal do Catavento<br>
+                            Arandu - SP
+                        </p>
+                    </div>
+                    <a href="https://maps.google.com/?q=Chale+Toca+do+Esquilo+Arandu+SP" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark text-white px-6 py-4 rounded-xl font-bold transition shadow-md">
+                        <i class="fa-solid fa-map-location-dot"></i> Abrir no GPS / Waze
+                    </a>
+                </div>
+                
+                <div class="md:w-2/3 h-80 md:h-auto min-h-[400px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.0784964724817!2d-48.99596008499999!3d-23.34914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c1cc0000000001%3A0x8f4d9b0a1a1a1a1a!2sRepresa%20de%20Jurumirim!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 mb-8 border-b border-brand/30 pb-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-tree text-brand-accent text-2xl"></i>
+                    <span class="font-serif font-bold text-xl">Toca do Esquilo</span>
+                </div>
+                <p class="text-gray-400 text-sm">Seu refúgio na natureza em Arandu/SP. Tranquilidade e lazer para toda família.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-brand-accent">Contato</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                    <li><i class="fa-brands fa-whatsapp w-5 text-center"></i> (14) 998947316</li>
+                    <li><i class="fa-regular fa-envelope w-5 text-center"></i> contato: alesecaf@uol.com.br</li>
+                    <li><i class="fa-solid fa-location-dot w-5 text-center"></i> Arandu, São Paulo, Brasil</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-brand-accent">Links Rápidos</h4>
+                <div class="flex flex-col gap-2 text-sm text-gray-300">
+                    <a href="acomodacoes.html" class="hover:text-white transition">Nossas Acomodações</a>
+                    <a href="lazer.html" class="hover:text-white transition">Área de Lazer</a>
+                    <a href="reservas.html" class="hover:text-white transition">Faça sua Reserva</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm">
+            <p>© 2026 Chalé Toca do Esquilo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5514998947316" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition hover:-translate-y-1 z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>

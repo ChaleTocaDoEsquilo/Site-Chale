@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Chalés | Toca do Esquilo</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#e8f3e8', 
+                            DEFAULT: '#4a7c59', 
+                            dark: '#2d4a36',
+                            accent: '#d4a373' 
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .scroll-smooth { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased flex flex-col min-h-screen">
+
+    <header class="w-full bg-white shadow-sm z-50 sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex-shrink-0 flex items-center gap-2">
+                <i class="fa-solid fa-tree text-brand text-xl md:text-2xl"></i>
+                <span class="font-serif font-bold text-lg md:text-xl text-brand-dark">Toca do Esquilo</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-gray-500 hover:text-brand font-semibold text-sm md:text-base transition flex items-center gap-2">
+                    <i class="fa-solid fa-house"></i> <span class="hidden md:inline">Início</span>
+                </a>
+                <a href="lazer.html" class="text-gray-500 hover:text-brand font-semibold text-sm md:text-base transition">Lazer</a>
+                <a href="reservas.html" class="bg-brand hover:bg-brand-dark text-white px-4 py-2 rounded-full font-semibold text-sm transition shadow-md flex items-center gap-2">
+                    <i class="fa-regular fa-calendar-check"></i> Reservar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-brand-dark text-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Nossos Chalés</h1>
+            <p class="text-lg text-brand-light font-light max-w-2xl mx-auto">Privacidade, conforto e rusticidade. Escolha o refúgio perfeito para os seus dias de descanso na beira da represa.</p>
+        </div>
+    </section>
+
+    <main class="flex-grow">
+        <div class="max-w-6xl mx-auto px-4 py-16 space-y-20">
+            
+            <div class="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100">
+                <div class="mb-6 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+                    <div>
+                        <h2 class="text-3xl font-serif font-bold text-brand-dark">Nossos chalés</h2>
+                        <p class="text-gray-500 mt-2"><i class="fa-solid fa-users text-brand-accent mr-2"></i> Acomoda até 4 pessoas</p>
+                    </div>
+                    <div class="text-brand font-bold text-xl">
+                        A partir de R$ 130 
+                    </div>
+                </div>
+
+                <div class="relative group mb-6">
+                    <button onclick="document.getElementById('carrossel-1').scrollBy({left: -400, behavior: 'smooth'})" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-brand-dark w-12 h-12 rounded-full shadow-xl z-10 items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex border border-gray-200">
+                        <i class="fa-solid fa-chevron-left text-xl"></i>
+                    </button>
+
+                    <div id="carrossel-1" class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth gap-4 pb-4">
+                        <div class="snap-center shrink-0 w-[85%] md:w-[60%] h-64 md:h-96 rounded-2xl overflow-hidden relative shadow-md">
+                            <img src="gallery-1-DQA7dniU.jpeg" alt="Fachada do Chalé" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">Frente do chalé</div>
+                        </div>
+                        <div class="snap-center shrink-0 w-[85%] md:w-[60%] h-64 md:h-96 rounded-2xl overflow-hidden relative shadow-md">
+                            <img src="gallery-2-Bx0YLxOd.jpeg" alt="Quarto" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">Interior</div>
+                        </div>
+                        <div class="snap-center shrink-0 w-[85%] md:w-[60%] h-64 md:h-96 rounded-2xl overflow-hidden relative shadow-md">
+                            <img src="quarto.jfif" alt="Cozinha" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">Quarto</div>
+                        </div>
+                        <div class="snap-center shrink-0 w-[85%] md:w-[60%] h-64 md:h-96 rounded-2xl overflow-hidden relative shadow-md">
+                            <img src="cozinha.jfif" alt="Cozinha" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">Cozinha</div>
+                        </div>
+                    </div>
+
+                    <button onclick="document.getElementById('carrossel-1').scrollBy({left: 400, behavior: 'smooth'})" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-brand-dark w-12 h-12 rounded-full shadow-xl z-10 items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex border border-gray-200">
+                        <i class="fa-solid fa-chevron-right text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="text-center text-xs text-gray-400 mb-6 flex justify-center items-center gap-2 md:hidden">
+                    <i class="fa-solid fa-arrows-left-right"></i> Arraste para ver mais fotos
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 text-gray-600 leading-relaxed space-y-4">
+                        <p>Espaçoso e aconchegante, ideal para famílias ou grupos de amigos. Conta com total independência, varanda privativa e cozinha completa para preparar as suas próprias refeições com todo o conforto.</p>
+                        <div class="flex flex-wrap gap-3 mt-4">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium"><i class="fa-solid fa-bed text-brand"></i> 1 Cama Casal</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium"><i class="fa-solid fa-bed text-brand"></i> 1 sofá-cama</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium"><i class="fa-solid fa-utensils text-brand"></i> Cozinha</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium"><i class="fa-solid fa-tv text-brand"></i> TV</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium"><i class="fa-solid fa-shower text-brand"></i> Banheiro</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <a href="reservas.html" class="w-full bg-brand hover:bg-brand-dark text-white text-center py-4 rounded-xl font-bold transition shadow-lg">Verificar Disponibilidade</a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <section class="bg-brand-light/30 py-16 border-y border-brand-light">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-serif font-bold text-brand-dark mb-4">Incluso na sua Estadia</h2>
+                    <p class="text-gray-600">Não se preocupe com taxas extras. Tudo isto já faz parte do seu pacote:</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                        <i class="fa-solid fa-wifi text-3xl text-brand mb-3"></i>
+                        <h4 class="font-bold text-gray-800">Wi-Fi Gratuito</h4>
+                        <p class="text-xs text-gray-500 mt-2">Em todos os chalés</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                        <i class="fa-solid fa-square-parking text-3xl text-brand mb-3"></i>
+                        <h4 class="font-bold text-gray-800">Estacionamento</h4>
+                        <p class="text-xs text-gray-500 mt-2">Vaga segura e gratuita</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                        <i class="fa-solid fa-sailboat text-3xl text-brand mb-3"></i>
+                        <h4 class="font-bold text-gray-800">Uso do Lazer</h4>
+                        <p class="text-xs text-gray-500 mt-2">Caiaques e pedalinhos livres</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                        <i class="fa-solid fa-kitchen-set text-3xl text-brand mb-3"></i>
+                        <h4 class="font-bold text-gray-800">Utensílios</h4>
+                        <p class="text-xs text-gray-500 mt-2">Itens básicos de cozinha</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+                <div class="border-2 border-brand-light rounded-3xl p-8 relative">
+                    <div class="absolute -top-5 bg-white px-4 text-brand font-bold text-xl flex items-center gap-2">
+                        <i class="fa-solid fa-suitcase"></i> O que trazer?
+                    </div>
+                    <ul class="space-y-4 text-gray-600 mt-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                            <span><strong>Roupas de cama e toalhas:</strong> Por questões de higiene e preferência, pedimos que traga o seu próprio enxoval.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                            <span><strong>Itens de higiene pessoal:</strong> Sabonete, shampoo, pasta de dentes, etc.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                            <span><strong>Alimentação:</strong> A cozinha é completa! Traga a sua comida e bebida à vontade. Temos churrasqueira!</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                            <span><strong>Repelente e protetor solar:</strong> Essenciais para aproveitar a natureza e a represa com tranquilidade.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border-2 border-brand-light rounded-3xl p-8 relative bg-gray-50">
+                    <div class="absolute -top-5 bg-gray-50 px-4 text-brand-dark font-bold text-xl flex items-center gap-2">
+                        <i class="fa-solid fa-scroll"></i> Regras da Casa
+                    </div>
+                    <ul class="space-y-4 text-gray-600 mt-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-volume-xmark text-brand mt-1"></i>
+                            <span><strong>Lei do Silêncio:</strong> Após as 22h, pedimos respeito ao descanso dos outros hóspedes. Não é permitido som automotivo ou caixas de som em volume alto.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-dog text-brand mt-1"></i>
+                            <span><strong>Pet Friendly:</strong> Aceitamos animais de pequeno e médio porte, mediante aviso prévio e respeito às regras de convivência.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-clock text-brand mt-1"></i>
+                            <span><strong>Horários:</strong> Check-in a partir das 10h e Check-out até as 16h do outro dia.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-brand-dark py-16 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Já escolheu o seu refúgio?</h2>
+                <p class="text-brand-light text-lg mb-8">As vagas para os próximos fins de semana costumam esgotar rápido. Garanta agora mesmo os seus dias de paz na natureza.</p>
+                <a href="reservas.html" class="inline-block bg-brand-accent hover:bg-yellow-600 text-white font-bold py-4 px-10 rounded-full text-lg transition shadow-2xl transform hover:-translate-y-1">
+                    Ver Datas Disponíveis
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 py-8 text-center text-gray-500 text-sm mt-auto">
+        <p>&copy; 2026 Chalé Toca do Esquilo. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
